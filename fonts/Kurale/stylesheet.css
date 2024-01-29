@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Kurale';
+    src: url('Kurale-Regular.woff2') format('woff2'),
+        url('Kurale-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
