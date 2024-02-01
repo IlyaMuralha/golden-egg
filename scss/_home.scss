@@ -1,0 +1,124 @@
+.home {
+    min-height: 800px;
+    position: relative;
+    &__img,
+    &__video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+    }
+    &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.70) 60%)
+
+    }
+}
+
+.top-menu__list {
+    @include flex(center, center);
+}
+.top-menu__item {
+    margin: 0 5px;
+}
+.top-menu__link {
+    text-transform: uppercase;
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    padding: 40px 25px;
+    border-top: 5px solid transparent;
+    transition: .3s;
+    &:hover {
+        color: $mainColor;
+        border-top: 5px solid $mainColor;
+    }
+}
+.logo {
+    margin: 0 60px;
+    img {
+        position: relative;
+        top: 15px;
+    }
+}
+.home__container-center {
+    @include flex(space-between, flex-start);
+    margin-top: 175px;
+}
+.social__list {
+    width: 62px;
+    margin-top: 40px;
+}
+.social__link {
+    display: block;
+    height: 62px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: .3s;
+    &:hover {
+        background-color: $mainColor;
+    }
+}
+.home__text {
+    text-align: center;
+    p {
+        color: $white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+.home__header {
+    padding: 0;
+    margin: 0;
+    color: $mainColor;
+    font-family: $kurale;
+    font-size: 72px;
+    font-weight: 400;
+    margin-top: 25px;
+    &::after {
+        @include line;
+    }
+}
+.home__btns {
+    margin-bottom: 80px;
+}
+.home__btn {
+    margin: 0 20px 20px;
+    &:hover {
+        background-color: lighten($mainColor, 10%);
+    }
+}
+.home__btn-transparent {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.50);
+}
+.home__down-arrow {
+    display: block;
+    width: 62px;
+    height: 62px;
+    margin: $mCenter;
+    border-radius: 50%;
+    &:hover {
+        background-color: $mainColor;
+    }
+}
+.time-work {
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+    transform: rotate(-90deg);
+    margin-top: 130px;
+    margin-left: -75px;
+}
